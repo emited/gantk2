@@ -13,7 +13,7 @@ See the License for the specific language governing permissions and
 limitations under the License. -->
 
 
-# NTK(TK)²: Generative Adversarial Neural Tangent Kernel ToolKit
+# GAN(TK)²: Generative Adversarial Neural Tangent Kernel ToolKit
 
 GAN analysis toolkit accompanying the paper *A Neural Tangent Kernel Perspective of GANs* (Jean-Yves Franceschi,* Emmanuel de Bézenac,* Ibrahim Ayed,* Mickaël Chen, Sylvain Lamprier, Patrick Gallinari).
 
