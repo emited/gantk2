@@ -18,6 +18,9 @@ limitations under the License. -->
 GAN analysis toolkit accompanying the paper *A Neural Tangent Kernel Perspective of GANs* (Jean-Yves Franceschi,* Emmanuel de Bézenac,* Ibrahim Ayed,* Mickaël Chen, Sylvain Lamprier, Patrick Gallinari).
 
 
+## [Preprint](https://arxiv.org/abs/2106.05566)
+
+
 ## Requirements
 
 This code was tested with Python 3.8.1 and 3.9.2, and run on GPUs Nvidia Titan RTX (24GB of VRAM) with CUDA 11.2 as well as Nvidia Titan V (12GB) and Nvidia GeForce RTX 2080 Ti (11 GB) with CUDA 10.2.
