@@ -28,7 +28,6 @@ from gantk2.utils.eval import evaluate
 from gantk2.utils.setup import setup, load_dataset, load_model
 
 
-
 def run_descent(opt, in_dataset, in_loader, z_in_loader, in_collate_fn, out_dataset, out_loader, out_collate_fn,
                 discr_model, discr_opt, discr_params, gen_model, gen_opt, gen_params, jax_rng_key_discr,
                 jax_rng_key_gen, chkpt_save_dir, img_save_dir):

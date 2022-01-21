@@ -214,7 +214,7 @@ def grad_gen_loss_factory(loss, integration_time, momentum):
                         static_broadcasted_argnums=(3, 5))
     else:
         if loss == 'vanilla':
-            gan_gen_loss_grad = jvanilla_gan_gen_loss
+            gan_gen_loss_grad = vanilla_gan_gen_loss
         elif loss == 'hinge':
             gan_gen_loss_grad = hinge_gan_gen_loss
         elif loss == 'lsgan':

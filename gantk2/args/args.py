@@ -242,15 +242,15 @@ def create_plot_args(p):
         return dim
 
     plot_p.add('--dim', type=check_dim, metavar='NB', default=2,
-              help='Number of input dimensions of the generator.')
+               help='Number of input dimensions of the generator.')
     plot_p.add('--nx', type=int, metavar='NB', default=15,
-              help='Resolution of x axis.')
+               help='Resolution of x axis.')
     plot_p.add('--ny', type=int, metavar='NB', default=15,
-              help='Resolution of x axis.')
+               help='Resolution of x axis.')
     plot_p.add('--plot_grad', action='store_true',
-              help='Whether to grad of discr or discr. For 1d plots only.')
+               help='Whether to grad of discr or discr. For 1d plots only.')
     plot_p.add('--quiver_scale', type=float, metavar='QS', default=1.,
-              help='Quiver scale of gradients of 2d plot. Smaller means larger arrows.')
+               help='Quiver scale of gradients of 2d plot. Smaller means larger arrows.')
     plot_p.add('--plot_output_file', type=str, metavar='FILEPATH', default=None,
                help='Output file to save the plot.')
     return p
@@ -262,13 +262,13 @@ def create_config_args(p):
     config_p = p.add_argument_group(title='Config Args',
                                  description='Choice of sets of Config Arguments to load and overwrite standard args.')
     config_p.add('--loss_config', type=str, metavar='LOSS', default=None, choices=list(exp_configs.loss_config.keys()),
-               help='')
+                 help='')
     config_p.add('--data_config', type=str, metavar='DATA', default=None, choices=list(exp_configs.data_config.keys()),
-               help='')
+                 help='')
     config_p.add('--arch_config', type=str, metavar='ARCH', default=None, choices=list(exp_configs.arch_config.keys()),
-               help='')
+                 help='')
     config_p.add('--ade1d_config', type=str, metavar='ADE1D', default=None, choices=list(exp_configs.ade1d_config.keys()),
-               help='Load config used for the 1d Adequation experiments in the paper.')
+                 help='Load config used for the 1d Adequation experiments in the paper.')
     config_p.add('--ade2d_config', type=str, metavar='ADE2D', default=None, choices=list(exp_configs.ade2d_config.keys()),
                  help='Load config used for the 2d Adequation experiments in the paper.')
     return p

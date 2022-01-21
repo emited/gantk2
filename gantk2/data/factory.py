@@ -23,7 +23,7 @@ from torch.utils.data import Dataset, Subset
 from gantk2.data.transforms import transform_factory
 
 
-datasets = ['simple', 'mnist']
+datasets = ['simple', 'mnist', 'celeba']
 
 
 class IndicesDataset(Dataset):
@@ -47,6 +47,8 @@ def dataset_dimensionality(dataset):
     assert dataset in datasets
     if dataset == 'mnist':
         return [32, 32, 1]
+    if dataset == 'celeba':
+        return [32, 32, 3]
     else:
         raise ValueError(f'No defined dimensionality for `{dataset}`')
 
@@ -72,6 +74,9 @@ def dataset_factory(config, source):
         config.data_dim = dataset_dimensionality(dataset_name)
         if dataset_name == 'mnist':
             from gantk2.data.mnist import get_dataset
+            dataset, collate_fn = get_dataset(config.data_path, transform, True)
+        elif dataset_name == 'celeba':
+            from gantk2.data.celeba import get_dataset
             dataset, collate_fn = get_dataset(config.data_path, transform, True)
         else:
             raise ValueError(f'No dataset named `{dataset_name}`')

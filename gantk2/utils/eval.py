@@ -101,6 +101,15 @@ def evaluate_mnist(x, data_transform):
     ax.imshow(data, cmap='gray', vmin=0., vmax=1.)
 
 
+def evaluate_celeba(x, data_transform):
+    _, ax = plt.subplots(1, 1, figsize=(5, 5))
+    data = np.concatenate([x[i] for i in range(min(len(x), 5))])
+    if data_transform == 'atanh':
+        data = np.tanh(data)
+    data = data / 1.999 + 0.5
+    ax.imshow(data, vmin=0., vmax=1.)
+
+
 def evaluate(config, particle_grad_fn,
              x=None, y=None,
              discr_params=None, discr_apply_fn=None,
@@ -124,6 +133,8 @@ def evaluate(config, particle_grad_fn,
                         )
     elif dataset == 'mnist':
         evaluate_mnist(x, config.out_transform)
+    elif dataset == 'celeba':
+        evaluate_celeba(x, config.out_transform)
     else:
         raise ValueError(f'Evaluate not defined for dataset `{dataset}`')
     finalize_plot(img_save_dir, step)
@@ -132,7 +143,7 @@ def evaluate(config, particle_grad_fn,
     metrics = {'step': step}
 
     # Sinkhorn
-    if dataset != 'mnist':
+    if dataset not in ['mnist', 'celeba']:
         metrics['s'] = samples_loss(x, y, 'sinkhorn', blur=config.sinkhorn_blur, scaling=.95)
         metrics['e'] = samples_loss(x, y, 'energy')
 

@@ -54,8 +54,8 @@ where `$DEVICE` is the GPU index, `$SAVE_PATH` is the directory where the experi
 
 Different options are available for `$LOSS_CONFIG`, `$ARCH_CONFIG` and `$DATA_CONFIG`, corresponding to the sets of hyperparameters used for the experiments of the paper:
  - for `$LOSS_CONFIG`: `inf_ipm` (infinite-width IPM), `ipm` (finite-width IPM), `ipm_reset` (finite-width IPM with reset), `inf_lsgan` (infinite-width LSGAN) or `lsgan` (finite-width LSGAN);
- - for `$ARCH_CONFIG`: `rbf` (RBF kernel, only for infinite-width losses), `relu`, `relu_nobias`;
- - for `$DATA_CONFIG`: `eight_gaussians`, `density`, `ab`, `mnist`.
+ - for `$ARCH_CONFIG`: `rbf` (RBF kernel, only for infinite-width losses), `relu`, `relu_nobias`, `relu_highbias` (used for CelebA);
+ - for `$DATA_CONFIG`: `eight_gaussians`, `density`, `ab`, `mnist`, `celeba`.
 
 For example, to reproduce the experiment on the eight Gaussians dataset with a ReLU network in the infinite-width regime and the IPM loss:
 ```bash

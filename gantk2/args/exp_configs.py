@@ -1,18 +1,3 @@
-# Copyright 2021 Ibrahim Ayed, Emmanuel de Bézenac, Mickaël Chen, Jean-Yves Franceschi, Sylvain Lamprier, Patrick Gallinari
-
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-
-#     http://www.apache.org/licenses/LICENSE-2.0
-
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-
 loss_config = {
     'lsgan': {
         'loss': 'lsgan',
@@ -48,7 +33,6 @@ loss_config = {
         'discr_integration_time': 0.1,
         'discr_antisymmetric': True,
     }
-
 }
 
 
@@ -58,6 +42,12 @@ arch_config = {
         'discr_activations': ['relu'],
         'discr_hidden': 128,
         'discr_b_std': 1.,
+    },
+    'relu_highbias': {
+        'discr_layers': 3,
+        'discr_activations': ['relu'],
+        'discr_hidden': 128,
+        'discr_b_std': 4.,
     },
     'relu_nobias': {
         'discr_layers': 3,
@@ -135,6 +125,18 @@ data_config = {
         'data_path': 'data',
         'in_dataset': 'simple',
         'out_dataset': 'mnist',
+        'in_nb_samples': 1024,
+        'in_distribution': 'gaussian',
+        'out_nb_samples': 1024,
+        'gen_nb_z': 1024,
+        'in_batch_size': 1024,
+        'eta': 100.,
+        'discr_integration_time': 1000.,
+    },
+    'celeba': {
+        'data_path': 'data',
+        'in_dataset': 'simple',
+        'out_dataset': 'celeba',
         'in_nb_samples': 1024,
         'in_distribution': 'gaussian',
         'out_nb_samples': 1024,
