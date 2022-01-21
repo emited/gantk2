@@ -47,7 +47,7 @@ def dataset_dimensionality(dataset):
     assert dataset in datasets
     if dataset == 'mnist':
         return [32, 32, 1]
-    if dataset == 'celeba':
+    elif dataset == 'celeba':
         return [32, 32, 3]
     else:
         raise ValueError(f'No defined dimensionality for `{dataset}`')
