@@ -15,7 +15,7 @@ limitations under the License. -->
 
 # GAN(TK)²: Generative Adversarial Neural Tangent Kernel ToolKit
 
-GAN analysis toolkit accompanying the paper *A Neural Tangent Kernel Perspective of GANs* (Jean-Yves Franceschi,* Emmanuel de Bézenac,* Ibrahim Ayed,* Mickaël Chen, Sylvain Lamprier, Patrick Gallinari).
+GAN analysis toolkit accompanying the paper *A Neural Tangent Kernel Perspective of GANs* (Jean-Yves Franceschi,* Emmanuel de Bézenac,* Ibrahim Ayed,* Mickaël Chen, Sylvain Lamprier, Patrick Gallinari), accepted at ICML 2022.
 
 
 ## [Preprint](https://arxiv.org/abs/2106.05566)
