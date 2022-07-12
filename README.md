@@ -18,6 +18,12 @@ limitations under the License. -->
 GAN analysis toolkit accompanying the paper *A Neural Tangent Kernel Perspective of GANs* (Jean-Yves Franceschi,* Emmanuel de Bézenac,* Ibrahim Ayed,* Mickaël Chen, Sylvain Lamprier, Patrick Gallinari), accepted at ICML 2022.
 
 
+## [Article](https://proceedings.mlr.press/v162/franceschi22a.html)
+
+
+## [Presentation](https://icml.cc/virtual/2022/spotlight/16000)
+
+
 ## [Preprint](https://arxiv.org/abs/2106.05566)
 
 
